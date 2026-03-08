@@ -10,7 +10,6 @@ const filter = () => {
   const transform = new Transform({
     transform(chunk, enc, cb) {
       
-      console.log(`Received chunk: ${chunk.toString()}`);
       buffer += chunk.toString();
       const lines = buffer.split('\n');
       buffer = lines.pop();
